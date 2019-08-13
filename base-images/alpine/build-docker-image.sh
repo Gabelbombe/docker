@@ -7,7 +7,7 @@ if [ $# -ne 1 ] ; then
     exit 1
 fi
 
-MY_NAME="karimarttila/alpine3.8"
+MY_NAME="gabelbombe/alpine3.8"
 MY_TAG=$1
 CMD_BUILD="docker build -f Dockerfile -t $MY_NAME:$MY_TAG ."
 

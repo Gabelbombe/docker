@@ -12,7 +12,7 @@ SS_DIR=$3
 SS_VERSION=$4
 
 if [ "$SS_VERSION" == "single-node" ] ; then
-  MY_NAME="karimarttila/simple-server-clojure-single-node"
+  MY_NAME="gabelbombe/simple-server-clojure-single-node"
   MY_BUILD_SCRIPT="./build-single-node-distributable.sh"
 elif [ "$SS_VERSION" == "table-storage" ] ; then
   if [[ -z "${AZURE_CONNECTION_STRING}" ]] ; then
@@ -22,7 +22,7 @@ elif [ "$SS_VERSION" == "table-storage" ] ; then
     exit -1
   fi
 
-  MY_NAME="karimarttila/simple-server-clojure-table-storage"
+  MY_NAME="gabelbombe/simple-server-clojure-table-storage"
   MY_BUILD_SCRIPT="./build-azure-table-storage-distributable.sh"
 
 elif [ "$SS_VERSION" == "dynamodb" ] ; then
@@ -30,7 +30,7 @@ elif [ "$SS_VERSION" == "dynamodb" ] ; then
     echo "SS_TABLE_PREFIX not set"
     exit -1
   fi
-  MY_NAME="karimarttila/simple-server-clojure-dynamodb"
+  MY_NAME="gabelbombe/simple-server-clojure-dynamodb"
   MY_BUILD_SCRIPT="./build-aws-eks-dynamodb-distributable.sh"
 else
   echo "Unknown choice: $SS_VERSION"

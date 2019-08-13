@@ -3,9 +3,9 @@
 if [ $# -ne 3 ] ; then
     echo "Usage: ./run-container-aws-dynamodb.sh <my-name> <my-tag> <table-prefix>"
     echo "Examples:"
-    echo "./run-container-aws-dynamodb.sh karimarttila/simple-server-clojure-dynamodb 0.1 kari-sseks"
+    echo "./run-container-aws-dynamodb.sh gabelbombe/simple-server-clojure-dynamodb 0.1 kari-sseks"
     echo "If you have problems starting the container, check it using sh:"
-    echo "  docker run -it --entrypoint /bin/bash karimarttila/simple-server-clojure-single-node:0.1"
+    echo "  docker run -it --entrypoint /bin/bash gabelbombe/simple-server-clojure-single-node:0.1"
     echo "You can get a terminal to running container, use commands:"
     echo "  docker ps -a => check the container name"
     echo "  docker exec -it <container-name> sh"
